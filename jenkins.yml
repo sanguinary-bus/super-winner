@@ -9,7 +9,9 @@ services:
     container_name: jenkins
     volumes:
       - jenkinsdata:/var/jenkins_home
+      - jenkinsm2:/root/.m2
       - /var/run/docker.sock:/var/run/docker.sock
 
 volumes:
   jenkinsdata:
+  jenkinsm2:
