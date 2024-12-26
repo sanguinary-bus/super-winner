@@ -1,0 +1,15 @@
+services:
+  gitbucket:
+    image: gitbucket/gitbucket:latest
+    container_name: gitbucket
+    ports:
+      - "9666:8080"
+      - "29418:29418" # Optional: SSH access
+    volumes:
+      - gitbucket_data:/var/lib/gitbucket
+    environment:
+      - JAVA_OPTS=-Xms512m -Xmx1024m
+    restart: unless-stopped
+
+volumes:
+  gitbucket_data:
