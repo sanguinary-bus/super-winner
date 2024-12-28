@@ -9,7 +9,6 @@ services:
       - gitbucket_data:/gitbucket
     environment:
       - JAVA_OPTS=-Xms512m -Xmx1024m
-    restart: unless-stopped
 
 volumes:
   gitbucket_data:
